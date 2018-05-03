@@ -47,8 +47,12 @@ end
 post '/show' do
   @user=User.find(session[:user_id])
   @tweet = Tweet.new(content: params[:tweet])
-  @tweet.save
   binding.pry
+  if params[:tweet].empty?
+    erb :new
+  else
+    @tweet.save
+  
   @user.tweets << @tweet
   # @user.tweets.content = params[:tweet]
     binding.pry
