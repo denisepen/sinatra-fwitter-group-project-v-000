@@ -1,1 +1,1 @@
-<%= @user.username  %> Tweets
+<%= @user.username %> Tweets
