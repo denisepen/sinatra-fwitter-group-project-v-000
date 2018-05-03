@@ -15,7 +15,7 @@ erb :homepage
 end
 
 get '/signup' do
-  if !logged_in?
+  if !session[:user_id]
   erb :signup
 end
   #signup page
@@ -29,7 +29,7 @@ get '/tweets' do
   @user = User.find(session[:user_id])
   # binding.pry
   if logged_in?
-    
+
  session[:user_id] = @user.id
   erb :tweets
 end
