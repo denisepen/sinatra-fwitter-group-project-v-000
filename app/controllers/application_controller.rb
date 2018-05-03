@@ -81,6 +81,7 @@ get '/logout' do
   session.clear
   redirect '/login'
 end
+end
 
 patch '/tweets/:id' do
   # binding.pry
