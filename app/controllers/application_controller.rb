@@ -39,7 +39,7 @@ end
    if  !logged_in?
      redirect '/login'
    else
-     erb :new
+     erb :"/tweets/new"
    end
  end
 
