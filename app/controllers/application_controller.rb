@@ -70,7 +70,7 @@ get '/logout' do
 end
 
 patch '/tweets/:id' do
-  binding.pry
+  # binding.pry
    @tweet=Tweet.find(params[:id])
    @tweet.update(content: params[:tweet])
   # @tweet.content = params[:tweet]
