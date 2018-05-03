@@ -30,6 +30,7 @@ get '/tweets' do
  session[:user_id] = @user.id
   erb :tweets
 end
+end
 
  get '/tweets/new' do
   #  raise session.inspect
