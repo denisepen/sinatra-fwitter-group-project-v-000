@@ -21,7 +21,7 @@ get '/signup' do
 end
 
 get '/login' do
-  if session[:user_id].empty?
+ if !current_user
   erb :"/users/login"
 end
 end
