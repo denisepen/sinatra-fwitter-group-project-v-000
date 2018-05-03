@@ -79,6 +79,10 @@ end
  end
  end
 
+ get "/users/:slug" do
+   @user = User.find_by(params[:slug])
+ end
+
 get '/logout' do
     session.clear
   redirect '/login'
