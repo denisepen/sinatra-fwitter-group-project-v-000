@@ -15,7 +15,7 @@ erb :homepage
 end
 
 get '/signup' do
-  if !session[:user_id]
+  if session[:user_id].empty?
   erb :signup
 end
   #signup page
