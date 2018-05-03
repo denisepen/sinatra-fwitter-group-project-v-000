@@ -58,6 +58,11 @@ get '/logout' do
   redirect '/login'
 end
 
+patch '/tweets/:id' do
+  @tweet=Tweet.find_by_id(params[:id])
+  @tweet.content = params[:content]
+end
+
 post '/show' do
   @user=User.find(session[:user_id])
   @tweet = Tweet.new(content: params[:tweet])
