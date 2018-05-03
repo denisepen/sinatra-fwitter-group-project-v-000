@@ -41,7 +41,8 @@ end
 
  get '/tweets/new' do
   #  raise session.inspect
-   if  logged_in?
+  @user = User.find(session[:user_id])
+   if  @user && logged_in?
      erb :"/tweets/new"
    else
      redirect '/login'
