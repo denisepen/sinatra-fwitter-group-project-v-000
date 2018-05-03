@@ -1,1 +1,1 @@
-<%= "I love " + "Ruby!!" %>
+<%= params[:username] %>
