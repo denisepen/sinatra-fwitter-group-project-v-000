@@ -49,14 +49,17 @@ end
  end
 
  get '/tweets/:id' do
-  #  if logged_in?
+    if current_user == User.find(session[:user_id])
    @tweet = Tweet.find(params[:id])
    @user = User.find(session[:user_id])
    @user.id = @tweet.user_id
    erb :"tweets/show"
- # else
- #   redirect '/login'
- # end
+ elsif logged_in?
+   redirect '/tweets'
+ else
+   
+   redirect '/login'
+ end
  end
 
  get '/tweets/:id/edit' do
