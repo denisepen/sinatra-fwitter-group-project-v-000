@@ -61,12 +61,12 @@ end
 
 post '/signup' do
 
-    if params[:username].empty? || params[:email].empty? || params[:password].empty?  && !logged_in?
+    if params[:username].empty? || params[:email].empty? || params[:password].empty?  #&& !logged_in?
          redirect "/signup"
      else
        @user = User.create(:username => params[:username], :email => params[:email], :password => params[:password])
        @user.save
-       if @user.save
+       if @user.save 
        session[:user_id] = @user.id
        session[:email] = @user.email
        session[:username] = @user.username
