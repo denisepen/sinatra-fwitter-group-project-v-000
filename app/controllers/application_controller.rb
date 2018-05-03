@@ -59,7 +59,7 @@ get '/logout' do
 end
 
 patch '/tweets/:id' do
-  # @tweet=Tweet.find_by_id(params[:id])
+   @tweet=Tweet.find(session[:user_id])
   @tweet.content = params[:content]
   @tweet.save
   redirect "/tweets/#{@tweet.id}"
