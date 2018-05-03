@@ -71,7 +71,7 @@ end
 
 patch '/tweets/:id' do
    @tweet=Tweet.find(params[:id])
-  @tweet.content = params[:content]
+  @tweet.content = params[:tweet]
   @tweet.save
   redirect "/tweets/#{@tweet.id}"
 end
