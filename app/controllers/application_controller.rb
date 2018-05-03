@@ -16,7 +16,7 @@ end
 
 get '/signup' do
   # if !current_user
-  erb :signup
+  erb :"/users/signup"
 
 end
 
