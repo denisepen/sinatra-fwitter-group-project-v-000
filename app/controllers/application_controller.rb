@@ -44,7 +44,7 @@ end
  end
 
  get '/tweets/:id' do
-   @tweet = tweet.find_by_id(params[:id])
+   @tweet = Tweet.find(session[:user_id])
    erb :"tweets/show"
  end
 
