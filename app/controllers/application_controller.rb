@@ -85,6 +85,7 @@ end
      redirect '/show'
    else
      redirect '/tweets'
+   end
  end
 
 get '/logout' do
