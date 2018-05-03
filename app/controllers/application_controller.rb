@@ -73,6 +73,7 @@ end
 patch '/tweets/:id' do
   # binding.pry
    @tweet=Tweet.find(params[:id])
+   if !params[:tweet].empty?
    @tweet.update(content: params[:tweet])
   # @tweet.content = params[:tweet]
   session[:tweet] = params[:tweet]
@@ -80,6 +81,9 @@ patch '/tweets/:id' do
   @user.id = @tweet.user_id
   @tweet.save
   redirect "/tweets/#{@tweet.id}"
+else 
+  redirect '/tweets/:id/edit'
+end
 end
 
 post '/show' do
