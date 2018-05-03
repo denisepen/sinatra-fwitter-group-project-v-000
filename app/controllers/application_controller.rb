@@ -43,6 +43,16 @@ end
    end
  end
 
+ get '/tweets/:id' do
+   @tweet = tweet.find(params[:id])
+   erb :"tweets/show"
+ end
+
+ get '/tweets/:id/edit' do
+   @tweet = tweet.find(params[:id])
+   @tweet.delete
+ end
+
 get '/logout' do
   session.clear
   redirect '/login'
