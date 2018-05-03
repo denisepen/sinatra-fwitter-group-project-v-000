@@ -103,7 +103,7 @@ patch '/tweets/:id' do
   @tweet.save
   redirect "/tweets/#{@tweet.id}"
 else
-  redirect '/tweets/:id/edit'
+  redirect "/tweets/#{@tweet.id}/edit"
 end
 end
 
