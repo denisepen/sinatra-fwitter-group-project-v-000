@@ -95,17 +95,17 @@ patch '/tweets/:id' do
   # binding.pry
   if logged_in?
    @tweet=Tweet.find(params[:id])
-   if !params[:content].empty?
-   @tweet.update(content: params[:content])
-  # @tweet.content = params[:tweet]
-  session[:tweet] = params[:content]
-  @user = User.find(session[:user_id])
-  @user.id = @tweet.user_id
-  @tweet.save
-  redirect "/tweets/#{@tweet.id}"
-else
-  redirect "/tweets/#{@tweet.id}/edit"
-end
+     if !params[:content].empty?
+     @tweet.update(content: params[:content])
+    # @tweet.content = params[:tweet]
+    session[:tweet] = params[:content]
+    @user = User.find(session[:user_id])
+    @user.id = @tweet.user_id
+    @tweet.save
+    redirect "/tweets/#{@tweet.id}"
+  else
+    redirect "/tweets/#{@tweet.id}/edit"
+  end
 else
   redirect '/login'
 end
