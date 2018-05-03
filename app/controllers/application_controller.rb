@@ -30,7 +30,7 @@ get '/tweets' do
   if logged_in?
 
  session[:user_id] = @user.id
-  erb :tweets
+  erb :"tweets/tweets"
 end
 end
 
