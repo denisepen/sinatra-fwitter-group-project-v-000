@@ -23,9 +23,11 @@ end
 end
 
 get '/login' do
-
+  if logged_in?
+    redirect '/tweets'
+  else
   erb :"/users/login"
-
+end
 end
 
 get '/tweets' do
