@@ -36,10 +36,10 @@ end
 
  get '/tweets/new' do
   #  raise session.inspect
-   if  !logged_in?
-     redirect '/login'
-   else
+   if  logged_in?
      erb :"/tweets/new"
+   else
+     redirect '/login'
    end
  end
 
