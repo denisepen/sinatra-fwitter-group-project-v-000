@@ -53,11 +53,6 @@ post '/show' do
   @tweet = Tweet.new(content: params[:tweet])
   @tweet.save
   session[:tweet] = params[:tweet]
-  binding.pry
-
-  # if params[:tweet].empty?
-  #   erb :new
-  # else
 
 
   @user.tweets << @tweet
