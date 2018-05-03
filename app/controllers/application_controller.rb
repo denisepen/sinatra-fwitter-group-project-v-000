@@ -15,9 +15,11 @@ erb :homepage
 end
 
 get '/signup' do
-  # if !current_user
+   if logged_in?
+     redirect '/tweets'
+   else
   erb :"/users/signup"
-
+end
 end
 
 get '/login' do
