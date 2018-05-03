@@ -49,7 +49,7 @@ end
  end
 
  get '/tweets/:id' do
-
+   binding.pry
    if session[:user_id] = @tweet.user_id
      @tweet = Tweet.find(params[:id])
      @user = User.find(session[:user_id])
