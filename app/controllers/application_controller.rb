@@ -81,7 +81,7 @@ patch '/tweets/:id' do
   @user.id = @tweet.user_id
   @tweet.save
   redirect "/tweets/#{@tweet.id}"
-else 
+else
   redirect '/tweets/:id/edit'
 end
 end
