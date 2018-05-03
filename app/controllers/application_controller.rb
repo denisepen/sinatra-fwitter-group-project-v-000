@@ -80,7 +80,7 @@ post '/signup' do
        session[:username] = @user.username
      end
        redirect '/tweets'
-     
+
     end
 end
 
