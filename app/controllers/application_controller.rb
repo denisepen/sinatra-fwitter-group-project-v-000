@@ -75,8 +75,8 @@ post '/signup' do
        @user = User.create(:username => params[:username], :email => params[:email], :password => params[:password])
        @user.save
        session[:user_id] = @user.id
-       session[:email] = params[:email]
-       session[:username] = params[:username]
+       session[:email] = @user.email
+       session[:username] = @user.username
 
        redirect '/tweets'
     end
@@ -89,7 +89,7 @@ post "/login" do
     if user && user.authenticate(params[:password])
       # User.find_by(username: params[:username])
           session[:user_id] = user.id
-          session[:email] = user.
+          session[:email] = user.email
           session[:username] = user.username
         redirect "/tweets"
     else
