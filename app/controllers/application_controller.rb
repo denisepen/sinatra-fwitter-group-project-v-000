@@ -76,7 +76,7 @@ end
  end
 
 get '/logout' do
-  @user=User.find(session[:user_id])
+  # @user=User.find(session[:user_id])
   # if @user
   session.clear
   redirect '/login'
