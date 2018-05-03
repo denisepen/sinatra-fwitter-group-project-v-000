@@ -143,6 +143,7 @@ delete '/tweets/:id/delete' do
 else
   redirect '/users/login'
 end
+end
 
 helpers do
 		def logged_in?
