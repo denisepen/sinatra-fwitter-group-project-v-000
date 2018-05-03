@@ -49,12 +49,12 @@ post '/show' do
   @tweet = Tweet.new(content: params[:tweet])
   @tweet.save
   binding.pry
-  
+
   # if params[:tweet].empty?
   #   erb :new
   # else
-    
-  
+
+
   @user.tweets << @tweet
   # @user.tweets.content = params[:tweet]
     binding.pry
