@@ -55,7 +55,6 @@ post '/show' do
   session[:tweet] = params[:tweet]
 
   @user.tweets << @tweet
-  @user.tweets << @tweet
 
   erb :show
 end
