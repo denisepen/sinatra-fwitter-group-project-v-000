@@ -21,9 +21,9 @@ get '/signup' do
 end
 
 get '/login' do
- if !current_user
+ 
   erb :"/users/login"
-end
+
 end
 
 get '/tweets' do
