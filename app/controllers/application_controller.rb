@@ -52,6 +52,7 @@ end
  else
    redirect '/login'
  end
+ end
 
  get '/tweets/:id/edit' do
    @tweet = tweet.find(params[:id])
