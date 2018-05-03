@@ -49,7 +49,8 @@ end
  end
 
  get '/tweets/:id' do
-    if current_user == User.find(session[:user_id])
+   @user = User.find(session[:user_id])
+    if current_user == @user
    @tweet = Tweet.find(params[:id])
    @user = User.find(session[:user_id])
    @user.id = @tweet.user_id
