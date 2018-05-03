@@ -1,1 +1,1 @@
-<%= @user.username %> Tweets
+<%= "I love " + "Ruby!!" %>
