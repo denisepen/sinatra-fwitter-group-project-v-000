@@ -33,7 +33,7 @@ get '/tweets' do
 
 
  session[:user_id] = @user.id
-  erb :"tweets/tweets"
+  erb :"/tweets/tweets"
 else
   redirect '/users/login'
 end
