@@ -55,7 +55,7 @@ end
    if session[:user_id] = @tweet.user_id
 
    erb :"tweets/show"
- elsif logged_in?
+ elsif logged_in? 
    redirect '/tweets'
  else
 
