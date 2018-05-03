@@ -74,11 +74,13 @@ post '/signup' do
      else
        @user = User.create(:username => params[:username], :email => params[:email], :password => params[:password])
        @user.save
+       if @user.save
        session[:user_id] = @user.id
        session[:email] = @user.email
        session[:username] = @user.username
 
        redirect '/tweets'
+     end
     end
 end
 
