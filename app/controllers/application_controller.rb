@@ -156,7 +156,7 @@ delete '/tweets/:id/delete' do
   @tweet = Tweet.find_by_id(params[:id])
   @tweet.delete
   redirect '/tweets'
-elsif 
+elsif
   logged_in? && !@user
   redirect '/tweets'
 else
