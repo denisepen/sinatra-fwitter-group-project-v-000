@@ -139,7 +139,7 @@ end
 post "/login" do
      user = User.find_by(username: params[:username])
     # if user
-    if user && user.authenticate(params[:password]) #&& logged_in?
+    if user && user.authenticate(params[:password]) || logged_in?
       # User.find_by(username: params[:username])
           session[:user_id] = user.id
           session[:email] = user.email
