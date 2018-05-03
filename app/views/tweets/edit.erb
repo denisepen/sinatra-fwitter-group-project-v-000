@@ -1,3 +1,6 @@
+<h2>Original Tweet</h2>
+<p><%= @tweet/content %></p>
+
 <form class="" action="/tweets/<%= @tweet.id %>" method="post">
   <input type="hidden" id="hidden" name="_method" value="patch">
 
