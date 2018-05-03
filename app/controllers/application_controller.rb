@@ -55,8 +55,12 @@ end
  end
 
  get '/tweets/:id/edit' do
-   @tweet = tweet.find(params[:id])
+   @user = User.find(session[:user_id])
+   if @user
+   @tweet = Tweet.find(params[:id])
    erb :"/tweets/edit"
+ else
+   redirect '/login'
  end
 
 get '/logout' do
