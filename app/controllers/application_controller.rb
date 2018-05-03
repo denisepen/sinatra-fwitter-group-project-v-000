@@ -57,7 +57,7 @@ end
  elsif logged_in?
    redirect '/tweets'
  else
-   
+
    redirect '/login'
  end
  end
