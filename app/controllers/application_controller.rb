@@ -15,7 +15,9 @@ erb :homepage
 end
 
 get '/signup' do
+  if !logged_in?
   erb :signup
+end
   #signup page
 end
 
