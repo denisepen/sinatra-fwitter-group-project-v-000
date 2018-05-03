@@ -89,8 +89,8 @@ post "/login" do
     if user && user.authenticate(params[:password])
       # User.find_by(username: params[:username])
           session[:user_id] = user.id
-          session[:email] = params[:email]
-          session[:username] = params[:username]
+          session[:email] = user.
+          session[:username] = user.username
         redirect "/tweets"
     else
         redirect "/login"
