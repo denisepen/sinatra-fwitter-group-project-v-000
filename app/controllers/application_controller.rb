@@ -16,7 +16,7 @@ end
 
 get '/signup' do
 
-  if User.find_by(session[:user_id])
+  if !User.find_by(session[:user_id])
 
   erb :signup
 end
