@@ -48,6 +48,7 @@ post '/show' do
   @user=User.find(session[:user_id])
   @tweet = Tweet.new(content: params[:tweet])
   @tweet.save
+  session[:tweet] = params[:tweet]
   binding.pry
 
   # if params[:tweet].empty?
