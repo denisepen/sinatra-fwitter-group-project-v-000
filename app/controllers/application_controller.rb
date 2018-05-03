@@ -80,6 +80,7 @@ end
  end
 
  get "/users/:slug" do
+   binding.pry
    @user = User.find_by_slug(params[:slug])
    if @user.id == session[:user_id]
      redirect '/users/show'
