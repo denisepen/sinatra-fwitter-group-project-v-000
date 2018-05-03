@@ -82,7 +82,7 @@ end
 get '/logout' do
   if logged_in?
     session.clear
-    
+
   redirect '/login'
  end
 end
