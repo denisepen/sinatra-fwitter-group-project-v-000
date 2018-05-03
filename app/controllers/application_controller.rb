@@ -75,6 +75,8 @@ patch '/tweets/:id' do
    @tweet.update(content: params[:tweet])
   # @tweet.content = params[:tweet]
   session[:tweet] = params[:tweet]
+  @user = User.find(session[:id])
+  @user.id = @tweet.user_id
   @tweet.save
   redirect "/tweets/#{@tweet.id}"
 end
