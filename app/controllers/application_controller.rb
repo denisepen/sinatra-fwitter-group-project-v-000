@@ -49,11 +49,11 @@ end
  end
 
  get '/tweets/:id' do
-  
+
    @tweet = Tweet.find(params[:id])
    @user = User.find(session[:user_id])
    if @user.id = @tweet.user_id
-   
+
    erb :"tweets/show"
  elsif logged_in?
    redirect '/tweets'
