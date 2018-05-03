@@ -15,12 +15,9 @@ erb :homepage
 end
 
 get '/signup' do
-
   # if !current_user
-
   erb :signup
-# end
-  #signup page
+
 end
 
 get '/login' do
