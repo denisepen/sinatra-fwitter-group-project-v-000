@@ -80,7 +80,11 @@ end
  end
 
  get "/users/:slug" do
-   @user = User.find_by(params[:slug])
+   @user = User.find_by_slug(params[:slug])
+   if @user.id == session[:user_id]
+     redirect '/show'
+   else
+     redirect '/tweets'
  end
 
 get '/logout' do
