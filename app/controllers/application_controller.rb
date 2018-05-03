@@ -59,7 +59,7 @@ post '/show' do
   erb :show
 end
 
-post '/users/signup' do
+post '/signup' do
 
     if params[:username].empty? || params[:email].empty? || params[:password].empty?  #&& !logged_in?
          redirect "/signup"
