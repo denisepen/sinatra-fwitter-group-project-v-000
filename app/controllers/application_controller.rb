@@ -135,9 +135,13 @@ post "/login" do
 end
 
 delete '/tweets/:id/delete' do
+  @user = User.find(session[:id])
+  if logged_in? && @user
   @tweet = Tweet.find_by_id(params[:id])
   @tweet.delete
   redirect '/tweets'
+else
+  redirect '/users/login'
 end
 
 helpers do
