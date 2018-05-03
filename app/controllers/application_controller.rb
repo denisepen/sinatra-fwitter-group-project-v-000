@@ -93,6 +93,7 @@ get '/logout' do
 
 patch '/tweets/:id' do
   # binding.pry
+  if logged_in?
    @tweet=Tweet.find(params[:id])
    if !params[:content].empty?
    @tweet.update(content: params[:content])
@@ -104,6 +105,9 @@ patch '/tweets/:id' do
   redirect "/tweets/#{@tweet.id}"
 else
   redirect "/tweets/#{@tweet.id}/edit"
+end
+else
+  redirect '/login'
 end
 end
 
