@@ -15,8 +15,8 @@ erb :homepage
 end
 
 get '/signup' do
-  user = User.find_by(session[:user_id])
-  if user
+   
+  if User.find_by(session[:user_id])
 
   erb :signup
 end
