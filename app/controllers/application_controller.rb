@@ -47,8 +47,9 @@ end
 post '/show' do
   @user=User.find(session[:user_id])
   @tweet = params[:tweet]
+    binding.pry
   @user.tweets << @tweet
-  binding.pry
+
   erb :show
 end
 post '/signup' do
