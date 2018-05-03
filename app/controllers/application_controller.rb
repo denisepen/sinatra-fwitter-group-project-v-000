@@ -109,7 +109,7 @@ end
 
 post '/show' do
   @user=User.find(session[:user_id])
-  @tweet = Tweet.new(content: params[:tweet])
+  @tweet = Tweet.new(content: params[:content])
   @tweet.save
   session[:tweet] = params[:tweet]
 
