@@ -41,7 +41,7 @@ end
 
  get '/tweets/new' do
   #  raise session.inspect
-  @user = User.find(session[:user_id])
+  # @user = User.find(session[:user_id])
    if   logged_in?
      erb :"/tweets/new"
    else
