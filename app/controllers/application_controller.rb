@@ -94,10 +94,10 @@ get '/logout' do
 patch '/tweets/:id' do
   # binding.pry
    @tweet=Tweet.find(params[:id])
-   if !params[:tweet].empty?
-   @tweet.update(content: params[:tweet])
+   if !params[:content].empty?
+   @tweet.update(content: params[:content])
   # @tweet.content = params[:tweet]
-  session[:tweet] = params[:tweet]
+  session[:tweet] = params[:content]
   @user = User.find(session[:user_id])
   @user.id = @tweet.user_id
   @tweet.save
