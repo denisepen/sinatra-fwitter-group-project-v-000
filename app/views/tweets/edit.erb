@@ -1,8 +1,8 @@
 <form class="" action="/show" method="post">
-
+  <input type="hidden" id="hidden" name="_method" value="patch">
 
   <label for="twt">Tweet: </label>
-  <input type="hidden" id="hidden" name="_method" value="patch">
+
   <input type="textarea"   id="twt" name="tweet" value="<%= @tweet.content">
 
   <input type="submit" name="" value="Submit">
