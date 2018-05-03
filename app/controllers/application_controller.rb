@@ -32,7 +32,7 @@ end
 
  get '/tweets/new' do
   #  raise session.inspect
-   if session[:username].empty?
+   if session[:username].empty? || !logged_in?
      redirect '/login'
    else
      erb :new
