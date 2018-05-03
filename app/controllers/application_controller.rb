@@ -46,7 +46,7 @@ end
 
 post '/show' do
   @user=User.find(session[:user_id])
-  @tweet.content = params[:tweet]
+  @tweet = params[:tweet]
   @user.tweets << @tweet
   binding.pry
   erb :show
