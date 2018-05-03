@@ -54,14 +54,12 @@ post '/show' do
   @tweet.save
   session[:tweet] = params[:tweet]
 
-
   @user.tweets << @tweet
-  # @user.tweets.content = params[:tweet]
-    # binding.pry
   @user.tweets << @tweet
 
   erb :show
 end
+
 post '/signup' do
 
     if params[:username].empty? || params[:email].empty? || params[:password].empty?  #&& !logged_in?
