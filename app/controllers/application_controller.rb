@@ -110,12 +110,16 @@ end
 post '/show' do
   @user=User.find(session[:user_id])
   @tweet = Tweet.new(content: params[:content])
+  if params[:content].empty?
+    redirect '/tweets/new'
+  else
   @tweet.save
   session[:tweet] = params[:content]
 
   @user.tweets << @tweet
 
   erb :"/users/show"
+end
 end
 
 post '/signup' do
