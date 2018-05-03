@@ -57,7 +57,7 @@ post '/show' do
 
   @user.tweets << @tweet
   # @user.tweets.content = params[:tweet]
-    binding.pry
+    # binding.pry
   @user.tweets << @tweet
 
   erb :show
