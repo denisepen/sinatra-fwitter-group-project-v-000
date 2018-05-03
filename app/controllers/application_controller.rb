@@ -58,7 +58,7 @@ post '/signup' do
        session[:user_id] = @user.id
        session[:email] = params[:email]
        session[:username] = params[:username]
-       
+
        redirect '/tweets'
     end
 end
