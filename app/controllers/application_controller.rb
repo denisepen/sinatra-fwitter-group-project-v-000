@@ -50,7 +50,7 @@ end
 
  get '/tweets/:id/edit' do
    @tweet = tweet.find(params[:id])
-   @tweet.delete
+   erb :"/tweets/edit"
  end
 
 get '/logout' do
