@@ -25,9 +25,10 @@ get '/login' do
 end
 
 get '/tweets' do
+  if logged_in?
   @user = User.find(session[:user_id])
   # binding.pry
-  if logged_in?
+  
 
  session[:user_id] = @user.id
   erb :"tweets/tweets"
