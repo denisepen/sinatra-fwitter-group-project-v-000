@@ -53,8 +53,6 @@ post '/signup' do
     if params[:username].empty? || params[:email].empty? || params[:password].empty?
          redirect "/signup"
      else
-       
-      #  binding.pry
        session[:user_id] = @user.id
        session[:email] = params[:email]
        session[:username] = params[:username]
