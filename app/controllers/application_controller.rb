@@ -16,10 +16,10 @@ end
 
 get '/signup' do
 
-  if !current_user
+  # if !current_user
 
   erb :signup
-end
+# end
   #signup page
 end
 
