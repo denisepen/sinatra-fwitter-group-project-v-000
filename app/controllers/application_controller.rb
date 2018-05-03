@@ -46,6 +46,7 @@ end
 
 post '/show' do
   @user=User.find(session[:user_id])
+  binding.pry
   erb :show
 end
 post '/signup' do
