@@ -1,5 +1,5 @@
 <h1><%= @user.username %>'s Tweets</h1>
 
-<% @user.tweets.each do |tweet| %>
- <%= tweet.content    %> <br>
+<% @user.tweets.each.with_index(1) do |tweet, index| %>
+ <%= index. tweet.content    %> <br>
  <% end %>
