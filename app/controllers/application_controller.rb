@@ -56,7 +56,7 @@ post '/show' do
 
   @user.tweets << @tweet
 
-  erb :show
+  erb :"/users/show"
 end
 
 post '/signup' do
