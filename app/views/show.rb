@@ -1,1 +1,1 @@
-<%= "@user.params[:username]" %>
+<%= "I love Ruby" %>
