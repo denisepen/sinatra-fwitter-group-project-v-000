@@ -45,7 +45,7 @@ get '/logout' do
 end
 
 post '/show' do
-  @user=User.find(params[:user_id])
+  @user=User.find(session[:user_id])
   erb :show
 end
 post '/signup' do
