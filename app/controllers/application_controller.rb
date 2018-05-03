@@ -26,7 +26,7 @@ get '/login' do
 end
 
 get '/tweets' do
-  
+
   # binding.pry
   if logged_in?
     @user = User.find(session[:user_id])
