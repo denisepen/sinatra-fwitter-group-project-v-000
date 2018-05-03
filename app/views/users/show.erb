@@ -1,5 +1,5 @@
 <h1><%= @user.username %>'s Tweets</h1>
 
 <% @user.tweets.each do |tweet| %>
-  <a href="#"> <%= tweet.content    %></a> <br>
+  <a href="/tweets/<%= tweet.id%>"> <%= tweet.content    %></a> <br>
  <% end %>
