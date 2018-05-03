@@ -80,11 +80,11 @@ end
  end
 
 get '/logout' do
-  # @user=User.find(session[:user_id])
-  # if @user
-  session.clear
+  if logged_in?
+    session.clear
+    
   redirect '/login'
-# end
+ end
 end
 
 patch '/tweets/:id' do
