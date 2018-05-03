@@ -1,1 +1,1 @@
-<%= params[:username] %>
+<%= @user.params[:username] %>
