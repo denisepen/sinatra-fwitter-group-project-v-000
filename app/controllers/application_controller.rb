@@ -52,7 +52,7 @@ end
 
    @tweet = Tweet.find(params[:id])
    @user = User.find(session[:user_id])
-   if @user.id = @tweet.user_id
+   if session[:user_id] = @tweet.user_id
 
    erb :"tweets/show"
  elsif logged_in?
