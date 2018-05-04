@@ -168,7 +168,7 @@ delete '/tweets/:id/delete' do
      @tweet.delete
     redirect '/tweets'
 else
-    @tweet.delete
+    # @tweet.delete
     redirect '/tweets'
 
 end
