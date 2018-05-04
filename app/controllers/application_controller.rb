@@ -167,7 +167,7 @@ delete '/tweets/:id/delete' do
    if  @tweet.user_id == session[:id] && logged_in?
      @tweet.delete
     redirect '/tweets'
-else 
+  else
    redirect '/tweets'
 end
 end
