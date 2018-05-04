@@ -159,13 +159,13 @@ post "/login" do
 end
 
 delete '/tweets/:id/delete' do
-   
+
   if logged_in? && @user = User.find(session[:id])
   @tweet = Tweet.find_by_id(params[:id])
   @tweet.delete
   redirect '/tweets'
 elsif
-  logged_in? && !@user
+  logged_in? && @user !== User.find(session[:id])
     @tweet = Tweet.find_by_id(params[:id])
   redirect '/tweets'
 else
