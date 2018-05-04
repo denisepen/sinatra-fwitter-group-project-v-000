@@ -58,7 +58,8 @@ end
      @user = User.find(session[:user_id])
    erb :"tweets/show"
  elsif logged_in?
-   redirect '/tweets'
+   erb :"tweets/show"
+  #  redirect '/tweets'
  else
 
    redirect '/login'
