@@ -171,7 +171,7 @@ delete '/tweets/:id/delete' do
     redirect '/tweets'
   end
 else
-   @tweet = Tweet.find(params[:id])
+  #  @tweet = Tweet.find(params[:id])
   redirect '/tweets'
 end
 end
