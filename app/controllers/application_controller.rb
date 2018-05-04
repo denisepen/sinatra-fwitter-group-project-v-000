@@ -162,8 +162,8 @@ post "/login" do
 end
 
 delete '/tweets/:id/delete' do
-  @user = User.find(session[:id])
-   if logged_in? && @user
+  # @user = User.find(session[:id])
+   if logged_in? #&& @user
   @tweet = Tweet.find_by_id(params[:id])
   # @user =
     #  if @tweet.user_id == User.find(session[:id]).id
