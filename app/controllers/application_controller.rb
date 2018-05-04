@@ -162,7 +162,7 @@ post "/login" do
 end
 
 delete '/tweets/:id/delete' do
-  
+
     @tweet =Tweet.find_by_id(params[:id])
    if !logged_in? || @tweet.user_id != session[:id]
 
