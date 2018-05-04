@@ -105,10 +105,9 @@ patch '/tweets/:id' do
       redirect "/tweets/#{@tweet.id}"
     else
       redirect "/tweets/#{@tweet.id}/edit"
-    
+    end
 else
   redirect '/login'
-end
 end
 end
 
