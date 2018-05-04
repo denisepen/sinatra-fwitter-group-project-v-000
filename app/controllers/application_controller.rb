@@ -168,9 +168,11 @@ delete '/tweets/:id/delete' do
 
      @tweet.delete
     redirect '/tweets'
-else
-  #  @tweet = Tweet.find(params[:id])
-  redirect '/tweets'
+elsif @tweet.user_id == session[:id]
+    @tweet.delete
+    redirect '/tweets'
+  else
+    redirect '/tweets'
 end
 end
 
