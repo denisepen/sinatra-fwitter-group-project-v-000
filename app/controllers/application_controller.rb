@@ -165,7 +165,7 @@ delete '/tweets/:id/delete' do
   @tweet.delete
   redirect '/tweets'
 elsif
-  logged_in? && @user !== User.find(session[:id])
+  logged_in? && @user != User.find(session[:id])
     # @tweet = Tweet.find_by_id(params[:id])
   redirect '/tweets'
 else
