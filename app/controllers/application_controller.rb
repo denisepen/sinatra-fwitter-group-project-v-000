@@ -164,13 +164,13 @@ end
 delete '/tweets/:id/delete' do
 
     @tweet =Tweet.find_by_id(params[:id])
-   if  @tweet.user_id == session[:id]
+   if  @tweet.user_id == session[:id] || logged_in?
      @tweet.delete
     redirect '/tweets'
 else
     # @tweet.delete
     redirect '/tweets'
-# logged_in? ||
+#  ||
 end
 end
 
